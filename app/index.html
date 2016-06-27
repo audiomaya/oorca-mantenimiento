@@ -1,0 +1,375 @@
+<!doctype html>
+
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Polymer Starter Kit">
+  <title>OORCA</title>
+
+  <!-- Place favicon.ico in the `app/` directory -->
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#2E3AA1">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PSK">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+
+  <!-- Because this project uses vulcanize this should be your only html import
+       in this file. All other imports should go in elements.html -->
+  <link rel="import" href="elements/elements.html">
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+</head>
+
+<body unresolved>
+  <span id="browser-sync-binding"></span>
+  <template is="dom-bind" id="app">
+
+    <paper-drawer-panel id="paperDrawerPanel">
+      <!-- Drawer Scroll Header Panel -->
+      <paper-scroll-header-panel drawer fixed>
+
+        <!-- Drawer Toolbar -->
+        <paper-toolbar id="drawerToolbar">
+          <span class="menu-name">Menu</span>
+
+        </paper-toolbar>
+
+        <!-- Drawer Content -->
+        <paper-menu attr-for-selected="data-route" selected="[[route]]">
+          <a data-route="home" href="{{baseUrl}}">
+            <iron-icon icon="home"></iron-icon>
+            <span>Inicio</span>
+          </a>
+
+          <a data-route="inspec" href="{{baseUrl}}inspec">
+            <iron-icon icon="camera-enhance"></iron-icon>
+            <span>Inspecciones</span>
+          </a>
+
+          <a data-route="cisternas" href="{{baseUrl}}cisternas">
+            <iron-icon icon="check"></iron-icon>
+            <span>Limpieza de Cisternas</span>
+          </a>
+
+          <a data-route="sellado" href="{{baseUrl}}sellado">
+            <iron-icon icon="timeline"></iron-icon>
+            <span>Obturación</span>
+          </a>
+
+          <a data-route="mantenimiento" href="{{baseUrl}}mantenimiento">
+            <iron-icon icon="build"></iron-icon>
+            <span>Mantenimiento y soldadura</span>
+          </a>
+
+          <a data-route="purific" href="{{baseUrl}}purific">
+            <iron-icon icon="opacity"></iron-icon>
+            <span>Purificación de agua</span>
+          </a>
+
+          <a data-route="users" href="{{baseUrl}}users">
+            <iron-icon icon="add-circle"></iron-icon>
+            <span>Primeros Auxilios</span>
+          </a>
+
+          <a data-route="map" href="{{baseUrl}}map">
+            <iron-icon icon="star"></iron-icon>
+            <span>Map</span>
+          </a>
+
+          <a data-route="contact" href="{{baseUrl}}contact">
+            <iron-icon icon="mail"></iron-icon>
+            <span>Contact</span>
+          </a>
+
+        </paper-menu>
+      </paper-scroll-header-panel>
+
+      <!-- Main Area -->
+      <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
+        <!-- Main Toolbar -->
+        <paper-toolbar id="mainToolbar" class="tall">
+          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+
+          <span class="space"></span>
+
+          <!-- Toolbar icons -->
+          <paper-icon-button icon="refresh"></paper-icon-button>
+          <paper-icon-button icon="search"></paper-icon-button>
+
+          <!-- Application name -->
+          <div class="middle middle-container">
+            <iron-image alt="Logo de OORCA." src="../images/touch/icon-96x96.png"></iron-image>
+          </div>
+
+          <!-- Application sub title -->
+          <div class="bottom bottom-container">
+            <div class="bottom-title">Nuetro mercado se compone empresas, hoteles, fabricas, ect. y todo aquel establecimiento que cuente con una cisterna contra incendios.</div>
+          </div>
+        </paper-toolbar>
+
+        <!-- Main Content -->
+        <div class="content">
+          <iron-pages attr-for-selected="data-route" selected="{{route}}">
+            <section data-route="home">
+              <simple-fit id="myFit" auto-fit-on-attach class="sized x-cope simple-fit-0" top or bottom set>
+              </simple-fit>
+
+              <!--Header-->
+              <paper-material elevation="1">
+                <div class="contBanner">
+                  <h1 class="slider-title">Mantenimiento, reparación de <a href="">cisternas y depositos contra incendios.</a>
+                  </h1>
+                  <!--Slider section-->
+                  <section id="slider-container">
+                    <ul id="slider" class="slider-wrapper">
+                      <li class="slide-current">
+                        <img src="../images/imgCisternas.jpg" alt="Cambio de placas vortex">
+                        <div class="caption">
+                          <P>La  falta de mantenimiento en un sistema contra.</P>
+                          <h3 class="caption-title">INCENDIOS</h3>
+                          <p>puede complicar las cosas y provocar graves consecuancias.</p>
+                          <p>MAS VALE PREVENIR QUE LAMENTAR</p>
+
+                        </div>
+                      </li>
+
+                      <li>
+                        <img src="../images/cisterna-fuego.jpg" alt="Cambio de placas vortex">
+                        <div class="caption">
+                          <h3 class="caption-title">Cambio de placas Vortex.</h3>
+                          <p>Con el tiempo y por la labor destructiva del agua es importante hacer el cambio de placas vortex asi como de los vastagos...</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                <div class="principal">
+                  <h1>Mantenemos en optimas condiciones tu cisterna contra incendios sin necesidad de vaciarla.</h1>
+                  <div class="subtit">
+                    <h3>Algunos de nuestros servicios</h3>
+                  </div>
+                </div>
+
+
+                  <div class="horizontal">
+                    <div id="secc-limp">
+                      <img src="../images/icons/Simbolo_reciclar.png" alt="">
+                      <h2>Limpieza</h2>
+                    </div>
+                    <p>Limpieza y retiro de sedimento, escombro, costales, etc. Presentes en el fondo de la cisterna.</p>
+                  </div>
+                  <div class="horizontal">
+                    <div id="secc-mant">
+                      <img src="../images/icons/mantenimiento.png" alt="">
+                      <h2>Mantenimiento</h2>
+                    </div>
+                    <p>El mantenimiento de una cisterna va desde la obturación de grietas presentes en las paredes de la cisterna, cambio de placas vortex, colocación de epoxico subacuatico para prevenir corrosion en tuberias.</p>
+                  </div>
+                  <div class="horizontal">
+
+                    <div id="secc-purif">
+                      <img src="../images/icons/agua.png"  alt="">
+                      <h3>Tratamiento de agua</h3>
+                    </div>
+                  </div>
+
+
+              </paper-material>
+              <!--Fin header-->
+
+              <!--smurfit-->
+                <area-smurfit></area-smurfit>
+              <!-- fin -->
+
+              <!--Area clientes-->
+              <paper-material elevation="1">
+                <div class="principal">
+                  <div class="titulo">
+                    <h1>Algunos de nuestros Clientes Satisfechos</h1>
+                  </div>
+                  <div class="horizontal2">
+                    <img src="../images/smurfitkappa.jpg" alt="" />
+                  </div>
+                  <div class="horizontal2">
+                    <img src="../images/marsori.jpg" alt="">
+                  </div>
+                  <div class="horizontal2">
+                    <img src="../images/gasNieto.jpg" alt="">
+                  </div>
+                </div>
+
+              </paper-material>
+              <!--Fin clientes-->
+
+              <!--Mantenimiento-->
+              <paper-material elevation="1">
+                <mantenimiento>
+                  <h1>Intro Mantenimiento</h1>
+                </mantenimiento>
+              </paper-material>
+              <!--Fin Mantenimiento-->
+
+              <!--Limpieza agua-->
+              <paper-material elevation="1">
+                <mantenimiento>
+                  <h1>Intro Limpieza de agua</h1>
+                </mantenimiento>
+              </paper-material>
+              <!--Fin Limpieza agua-->
+
+              <!--Primeros Auxilios-->
+              <simple-fit id="myFi" auto-fit-on-attach class="sized x-cope simple-fit-0" top or bottom set>
+                <h1>Primeros Auxilios Básicos</h1>
+              </simple-fit>
+              <paper-material elevation="1">
+                <h2>La mejor forma de cuidar lo que mas amas...</h2>
+
+                <paper-button raised>Ir</paper-button>
+              </paper-material>
+              <!--Fin Primeros Auxilios-->
+            </section>
+            <!--inicio secciones .html-->
+
+            <section data-route="inspec">
+              <inspec-buceo></inspec-buceo>
+            </section>
+
+            <section data-route="users">
+              <paper-material elevation="1">
+                <h2 class="page-title">Primeros Auxilios Básicos.</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6f44mUIsj4k?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <h3>Necesitas capacitación en primeros auxilios</h3>
+                <p>Curso reconocido por la secretaria del trabajo.</p>
+                <h4>¿De que consta el curso?</h4>
+                <p>Manual.</p>
+                <p>Clases practias.</p>
+                <p>Clases teoricas.</p>
+              </paper-material>
+            </section>
+            <!-- limpieza-cisternas.html -->
+            <section data-route="cisternas">
+              <limpieza-cisternas></limpieza-cisternas>
+
+            </section>
+            <!-- fin -->
+
+            <!-- sellado-grietas.html -->
+            <section data-route="sellado">
+              <paper-material elevation="1">
+                <h1 class="page-title">Grietas y fugas de agua</h1>
+                <p>El poder altamente corrosivo del agua, puede erosionar el metal grietas en las paredes de la cisterna.</p>
+                <p>Para evitar perdidas de agua y daños estructurales es importante obturar las grietas.</p>
+              </paper-material>
+              <sellado-grietas></sellado-grietas>
+            </section>
+            <!-- fin -->
+
+            <!-- mantenimiento-soldadura.html -->
+            <section data-route="mantenimiento">
+              <paper-material elevation="1">
+                <h2 class="page-title">Mantenimiento y soldadura</h2>
+                <mantenimiento-soldadura></mantenimiento-soldadura>
+
+              </paper-material>
+            </section>
+            <!-- fin -->
+            <!-- purific-agua.html -->
+            <section data-route="purific">
+              <paper-material elevation="1">
+                <h2 class="page-title">Tratamiento de agua</h2>
+                <purific-agua></purific-agua>
+
+              </paper-material>
+            </section>
+            <!-- fin -->
+            <!-- Sección mapa -->
+            <section data-route="map">
+              <paper-material elevation="1">
+                <h2 class="page-title">Map</h2>
+                <p>Sección de los mapas</p>
+                <style>
+                google-map {
+                  height: 600px;
+                }
+                </style>
+                <google-map latitude="37.77493" longitude="-122.41942"></google-map>
+              </paper-material>
+            </section>
+            <!-- Fin mapa -->
+
+            <!--Contacto-->
+            <section data-route="contact">
+              <paper-material elevation="1">
+                <h2 class="page-title">Contact</h2>
+                <p>Info: 55 5502-0551 / 55 3775-0944</p>
+
+              </paper-material>
+            </section>
+
+          </iron-pages>
+        </div>
+      </paper-scroll-header-panel>
+    </paper-drawer-panel>
+
+    <paper-toast id="toast">
+      <span class="toast-hide-button" role="button" tabindex="0" onclick="app.$.toast.hide()">Ok</span>
+    </paper-toast>
+
+    <!-- Uncomment next block to enable Service Worker support (1/2) -->
+    <!--
+    <paper-toast id="caching-complete"
+                 duration="6000"
+                 text="Caching complete! This app will work offline.">
+    </paper-toast>
+
+    <platinum-sw-register auto-register
+                          clients-claim
+                          skip-waiting
+                          base-uri="bower_components/platinum-sw/bootstrap"
+                          on-service-worker-installed="displayInstalledToast">
+      <platinum-sw-cache default-cache-strategy="fastest"
+                         cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+    -->
+
+  </template>
+
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- endbuild-->
+</body>
+
+</html>

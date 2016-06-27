@@ -1,0 +1,121 @@
+
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="inspec-buceo">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      #boton1 {
+        background: rgb(8, 194, 99);
+        border-radius: .5em;
+        color: rgb(255, 255, 255);
+        font-size: 1.2em;
+        font-weight: 400;
+        padding: 12px;
+        text-align: center;
+        margin: 120px;
+      }
+      #boton2 {
+        background: rgb(5, 135, 69);
+        border-radius: .5em;
+        color: rgb(255, 255, 255);
+        font-size: 1.2em;
+        font-weight: 400;
+        padding: 12px;
+
+        margin: 50px;
+      }
+      #titulo, h1 {
+        background: rgb(8, 194, 99);
+        color: rgb(255, 255, 255);
+        font-size: 2.1em;
+        font-weight: 700;
+        margin: 0;
+        padding: 15px;
+        text-align: right;
+        width: 40%;
+      }
+      #titulo, h2 {
+        font-size: 1.8em;
+        font-weight: 700;
+        text-align: center;
+      }
+      #titulo, p {
+        font-size: 1.8em;
+        font-weight: 400;
+        text-align: center;
+      }
+      .cont-dere {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        width: 45%;
+      }
+      .cont-izq {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+      }
+      @media (max-width: 600px) and (max-width: 601px) {
+        .cont-izq {
+          background-image: url(/images/lente-camara.png);
+          background-repeat: no-repeat;
+          background-color: rgba(87, 87, 87, 1);
+          color: white;
+          width: 100%;
+        }
+        .cont-dere {
+          display: none;
+        }
+        #titulo, h1 {
+          background: rgba(8, 194, 99, 0.8);
+          color: rgb(255, 255, 255);
+          font-size: 2.1em;
+          font-weight: 700;
+          padding: 15px;
+          text-align: right;
+          width: 70%;
+        }
+      }
+    </style>
+    <section class="cont-izq">
+      <sectionid="titulo">
+        <h1 >Inspecciones</h1>
+        <p>Antes de cualquier trabajo es importante conocer las condiciones de una cisterna.</p>
+        <h2>Video filmaciones</br>
+        Formato digital</br>
+        Calidad de 720 hasta 4k</br>
+        Iluminación especializada</h2>
+        <button id="boton1">Programar inspección</button>
+      </section>
+    </section>
+
+    <section class="cont-dere">
+
+      <img src="/images/lente-camara.png" alt="" />
+      <button id="boton2">Limpieza</button>
+      <button id="boton2">Mantenimiento</button>
+    </section>
+
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'inspec-buceo',
+
+      properties: {
+        foo: {
+          type: String,
+          value: 'inspec-buceo',
+          notify: true
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>

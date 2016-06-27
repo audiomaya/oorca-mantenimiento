@@ -1,0 +1,111 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="limpieza-cisternas">
+
+  <template>
+    <style>
+      #lineaAzul {
+        background-color: #12aff5;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 10px;
+      }
+      .bg1{
+        background-image: url(/images/imgCisternas.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        color: rgb(204, 204, 204);
+        height: 700px;
+
+      }
+
+      :host {
+        display: block;
+      }
+    </style>
+    <paper-material class="bg1" elevation="2">
+      <h1>Este punto es importante</h1>
+    </paper-material>
+    <!-- Prueba -->
+    <paper-material elevation="1">
+      <h2 class="page-title">Limpieza de cisternas.</h2>
+
+      <template id="">
+
+      </template>
+
+      <h2>Procedimiento</h2>
+      <p>Nuestra mayor preocupación es mantener la <strong>integridad</strong>, <strong>seguridad</strong> de la empresa mediante el funcionamiento permanente del sistema contra incendios. todo esto con la finalidad en caso de presentarse una contingencia, se pueda utilizar el sistema contra incendios sin ningun problema. </p>
+      <img src="/images/limpiezaCisterna.jpg" alt="">
+      <p>Debido a que sabemos del poder destructivo del fuego </p>
+
+      <p>Lo anterior se logra mediante la implementación de equipo y buzos calificados.</p>
+      <p></p>
+
+      <simple-dialog-imp1 id="dialog">
+        <h2>Riesgos</h2>
+
+
+            <h3>Sedimento. </h3>
+            <p>En grandes consentraciones el sedimento puede presentar un problema si es absorbido por las tomas de agua del sistema contra incendios.</p>
+
+            <img src="/images/rociador.jpg" alt="">
+            <div class="centered">
+              <h2>¿Que sucede si el sedimento es demasiado?</h2>
+            </div>
+            <div class="horizontal-section-container">
+              <div>
+                <div class="horizontal-section">
+                    <p>En la mayor parte de los casos el sedimento se endurece debido al tiempo, esto puede comprometer la instalación, bombas y aspersores del sistema contra incendios.</p>
+                    <p>Si el sedimento llega a los aspersores del sistema contra incedios provoca la obstrucción de los aspersores evitando que controlen o apaguen el fuego.</p>
+                </div>
+              </div>
+              <div>
+                <div class="horizontal-section">
+                    <img src="/images/rociador2.jpg" alt="Aspersor">
+                </div>
+              </div>
+            </div>
+            <h3>Grietas y fisuras en las parades del contenedor de agua.</h3>
+            <p>El poder altamente corrosivo del agua, puede erosionar el metal grietas en las paredes de la cisterna.</p>
+            <h2>Beneficios</h2>
+            <li>La eliminación de fallos en el sistema contra incendios causado por sedimento y demas materiales presentes en el fondo de la cisterna.</li>
+            <h3>Vacterias en el agua</h3>
+            <li> La instalación contra incendios est? conectada (sin una protección de corte eficaz) a otras redes de almacenamiento y distribución de agua que pueden resultar contaminadas si la bacteria se desarrolla en la red contra incendios.</li>
+            <li>La instalación contra incendios est? contaminada por bacterias de tipo Legionella pneumophilia y los trabajadores y usuarios se ven potencialmente expuestos en la ejecuci?n de pruebas hidráulicas.</li>
+            <li>La instalación contra incendios est? contaminada por bacterias de tipo Legionella pneumophilia y los trabajadores y usuarios se ven potencialmente expuestos durante el uso de los equipos en una situaci?n de emergencia.</li>
+
+      <div>This is {{params.name}}'s section</div>
+    </paper-material>
+    <!-- fin -->
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'limpieza-cisternas',
+
+      properties: {
+        foo: {
+          type: String,
+          value: 'limpieza-cisternas',
+          notify: true
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>
