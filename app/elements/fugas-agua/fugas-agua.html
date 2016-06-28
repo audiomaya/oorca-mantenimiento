@@ -10,28 +10,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="sellado-grietas">
+<dom-module id="fugas-agua">
   <template>
     <style>
       :host {
         display: block;
       }
     </style>
-    <header>
+    <div>Hello from <span>{{foo}}</span></div>
+    <section>
 
-      <h1>Bien venidos al sellado de grietas</h1>
-    </header>
+      <h1>Cisternas con grietas, fisuras y fugas de agua.</h1>
+      <p>Las fisuras o grietas en las paredes de las cisternas se generan por el mal empleo y calidad de los materiales con los que se construyó; estas grietas generan fugas de agua las cuales son muy peligrosas para la construcción de la fabricas o edificio ya que la salida de agua ocasiona que el suelo se ablandezca y  haya hundimientos y hasta la caída de las estructuras.</p>
+    </section>
+  </template>
   <script>
   (function() {
     'use strict';
 
     Polymer({
-      is: 'sellado-grietas',
+      is: 'fugas-agua',
 
       properties: {
         foo: {
           type: String,
-          value: 'sellado-grietas',
+          value: 'fugas-agua',
           notify: true
         }
       }

@@ -81,9 +81,9 @@
             <span>Limpieza de Cisternas</span>
           </a>
 
-          <a data-route="sellado" href="{{baseUrl}}sellado">
+          <a data-route="fugas" href="{{baseUrl}}fugas">
             <iron-icon icon="timeline"></iron-icon>
-            <span>Obturación</span>
+            <span>Fugas de agua</span>
           </a>
 
           <a data-route="mantenimiento" href="{{baseUrl}}mantenimiento">
@@ -209,6 +209,7 @@
 
               <!--smurfit-->
                 <area-smurfit></area-smurfit>
+
               <!-- fin -->
 
               <!--Area clientes-->
@@ -231,21 +232,6 @@
               </paper-material>
               <!--Fin clientes-->
 
-              <!--Mantenimiento-->
-              <paper-material elevation="1">
-                <mantenimiento>
-                  <h1>Intro Mantenimiento</h1>
-                </mantenimiento>
-              </paper-material>
-              <!--Fin Mantenimiento-->
-
-              <!--Limpieza agua-->
-              <paper-material elevation="1">
-                <mantenimiento>
-                  <h1>Intro Limpieza de agua</h1>
-                </mantenimiento>
-              </paper-material>
-              <!--Fin Limpieza agua-->
 
               <!--Primeros Auxilios-->
               <simple-fit id="myFi" auto-fit-on-attach class="sized x-cope simple-fit-0" top or bottom set>
@@ -284,13 +270,13 @@
             <!-- fin -->
 
             <!-- sellado-grietas.html -->
-            <section data-route="sellado">
+            <section data-route="fugas">
               <paper-material elevation="1">
                 <h1 class="page-title">Grietas y fugas de agua</h1>
                 <p>El poder altamente corrosivo del agua, puede erosionar el metal grietas en las paredes de la cisterna.</p>
                 <p>Para evitar perdidas de agua y daños estructurales es importante obturar las grietas.</p>
+                <fugas-agua></fugas-agua>
               </paper-material>
-              <sellado-grietas></sellado-grietas>
             </section>
             <!-- fin -->
 
