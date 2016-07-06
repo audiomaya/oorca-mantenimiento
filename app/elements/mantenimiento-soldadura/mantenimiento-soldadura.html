@@ -13,6 +13,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="mantenimiento-soldadura">
   <template>
     <style>
+      .container {
+        text-align: center;
+      }
+      .tarjeta-container{
+        margin-top: 100px;
+      }
       video #fullscreen {
         background-image: url(../images/imgCambioPlacas.jpg) no-repeat;
         background-size: cover;
@@ -31,32 +37,90 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
     <header>
-
-      
-
       <video width="100%" is="google-castable-video" autoplay loop muted poster="../images/imgCambioPlacas.jpg" id="fullscreen">
         <source src="/video/cambio-placas.mp4">
         <source src="/video/cambio-placas.ogv">
         <source src="/video/cambio-placas.webm">
       </video>
     </header>
-    <p>Seguimos probando el servicio</p>
+    <h1>Soluciones profesionales con equipo profesional</h1>
+    <p>Tenemos un gran equipo de buzos industriales (Buzos comerciales), lo cual da como resultado un trabajo profesional y muy alta calidad algunas de las especialides en trabajos de buceo son las siguientes:</p>
+    <ul>
+      <li>Plataformas marinas fijas</li>
+      <li>Autoelevables</li>
+      <li>Semisumergibles</li>
+      <li>Puentes</li>
+      <li>Muelles</li>
+      <li>Tablaestacas</li>
+      <li>Pilotes</li>
+      <li>Diques de alba</li>
+      <li>Presas</li>
+      <li>Centrales hidroeléctricas</li>
+      <li>Centrales nucleares</li>
+      <li>Agua potable</li>
+      <li>Tanques</li>
+      <li>Cisternas</li>
+      <li>Embarcaciones mayores</li>
+      <li>Barcos</li>
+      <li>Rescate en embarcaciones</li>
+      <li>Rastreo</li>
+      <li>Rescate de piezas perdidas</li>
+      <li>Corte submarino</li>
+      <li>Soldadura submarina</li>
+      <li>Fotografía submarina</li>
+      <li>Video submarino</li>
+      <li>Etc</li>
+    </ul>
+    <p>Programa una cita y un representante de OORCA lo visitara en sus instalaciones.</p>
+    <div class="container button-container">
+      <button type="button" onclick="show()">Abrir</button>
+      <button type="button" onclick="hide()">Cerrar</button>
+    </div>
+    <div class="container tarjeta-container">
+      <tarjeta-datos></tarjeta-datos>
+    </div>
+
+    <label class="style-scope paper-input" id="paper-input-label-1">Nombre</label>
+    <input is="iron-input" method="get" action="/" id="input">
+      <paper-input name="name" label="Name" required></paper-input>
+      <br>
+      <input type="checkbox" name="inspeccion" value="inspeccion"> Inspección <br>
+      <input type="checkbox" name="limpieza" value="limpieza"> Limpieza <br>
+      <input type="checkbox" name="mantenimiento" value="mantenimiento"> Mantenimiento <br>
+      <paper-dropdown-menu label="Ubicación de proyecto" name="locacion" required>
+        <paper-menu class="dropdown-content">
+          <paper-item value="confinado">Aguas confinadas (Lagos, lagunas, ríos.)</paper-item>
+          <paper-item value="abiertas">Aguas aviertas (mar)</paper-item>
+        </paper-menu>
+      </paper-dropdown-menu>
+      <paper-button raised onclick="_submit(event)">Submit</paper-button>
+      <paper-button raised onclick="_reset(event)">Reset</paper-button>
+    </form>
   </template>
+  <script type="text/javascript">
+    var login = document.querySelector('tarjeta-datos');
+    function show() {
+      login.show();
+    }
+    funciont hide() {
+      login.hide();
+    }
+  </script>
   <script>
-  (function() {
-    'use strict';
+    (function() {
+      'use strict';
 
-    Polymer({
-      is: 'mantenimiento-soldadura',
+      Polymer({
+        is: 'mantenimiento-soldadura',
 
-      properties: {
-        foo: {
-          type: String,
-          value: 'mantenimiento-soldadura',
-          notify: true
+        properties: {
+          foo: {
+            type: String,
+            value: 'mantenimiento-soldadura',
+            notify: true
+          }
         }
-      }
-    });
-  })();
+      });
+    })();
   </script>
 </dom-module>
