@@ -18,6 +18,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       .tarjeta-container{
         margin-top: 100px;
+        width: 5%;
       }
       video #fullscreen {
         background-image: url(../images/imgCambioPlacas.jpg) no-repeat;
@@ -98,12 +99,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </form>
   </template>
   <script type="text/javascript">
-    var login = document.querySelector('tarjeta-datos');
+    var tarjeta = document.querySelectorAll('tarjeta-datos');
     function show() {
-      login.show();
+        tarjeta.show();
     }
-    funciont hide() {
-      login.hide();
+    function hide() {
+        tarjeta.hide();
     }
   </script>
   <script>

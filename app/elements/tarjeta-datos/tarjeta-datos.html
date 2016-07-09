@@ -14,8 +14,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style>
       :host {
-        display: block;
+        display: none;
         font-family: Roboto, Helvetica, Arial, sans-serif;
+        text-align: left;
       }
       #notes {
         @apply(--layout-vertical);
@@ -32,12 +33,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         flex: 0 0 auto;
       }
       paper-material{
+        background-color: rgb(79, 151, 210);
         padding: 16px;
         width: 300px;
       }
     </style>
     <!--inicio prueba master-->
-    <template>
+
       <paper-material elevation="1">
         <h2>Sing In</h2>
         <div>
@@ -46,9 +48,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <div>
           <paper-input label="Password"></paper-input>
         </div>
-
       </paper-material>
-    </template>
+
     <!--fin prueba master-->
     <div id="notes">
       <!--inicio prueba-->
@@ -76,48 +77,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div>Hello from <span>{{foo}}</span></div>
   </template>
   <script>
-  (function() {
-    'use strict';
+    (function() {
+      'use strict';
 
     Polymer({
-      is: 'tarjeta-datos',
-      behaviors: [Polymer.NeonAnimationRunnerBehavior],
-
+      is: 'tarjeta-datos'
       properties: {
         opened: {
           type: Boolean
         },
-        animationConfig:{
-          value: function() {
-            return {
-              'entry': {
-                name: 'scale-up-animation',
-                node: this
-              },
-              'exit': {
-                name: 'fade-out-animation',
-                node: this
-              }
-            }
-          }
-        }
-      },
+      }
       show: function() {
         this.opened = true;
         this.style.display = 'inline-block';
-        this.playAnimation('entry');
-      },
+      }
       hide: function() {
         this.opened = false;
-        this.cancelAnimation();
-        this.playAnimation('exit');
-      },
-      _onNeonAnimationFinish: function() {
-        if (!this.opened) {
-          this.style.display = 'none';
-        }
+        this.style.display = 'none';
       }
-    });
-  })();
+    })});
   </script>
 </dom-module>
